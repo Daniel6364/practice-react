@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Mycomponent from './MyComponent.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function test01() {
+    const name = 'React Test';
+    const status = 'on';
+    return (<>
+        {status === 'on' ? (<h1>{name} is running</h1>) : (<h2>{name} is not running</h2>)}
+    </>);
 }
+
+function test02() {
+    const name = undefined;
+    return <div className="react">
+        <h1>{name || '리액트'}</h1>
+    </div>
+
+}
+
+function test03() {
+    const name = '리액트';
+    return (<>
+        <div className="react">
+            <h1>  {name}</h1>
+        </div>
+        <input/>
+    </>)
+}
+
+const App = () => {
+    return <Mycomponent />;
+}
+
+// function App() {
+//
+//     return (test03());
+// }
 
 export default App;
