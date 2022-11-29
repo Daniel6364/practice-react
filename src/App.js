@@ -1,5 +1,6 @@
 import './App.css';
 import Mycomponent from './MyComponent.js';
+import Say from './Say.js';
 
 function test01() {
     const name = 'React Test';
@@ -28,7 +29,7 @@ function test03() {
 }
 
 const App = () => {
-    return <Mycomponent />;
+    return <Say />;
 }
 
 // function App() {
